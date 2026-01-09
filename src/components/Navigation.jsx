@@ -3,6 +3,7 @@ import './Navigation.css';
 
 const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,11 +13,29 @@ const Navigation = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        // lock body scroll when mobile menu is open
+        document.body.style.overflow = open ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [open]);
+
     return (
         <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
             <div className="nav-container">
                 <div className="nav-logo">AtelierAI</div>
-                <div className="nav-links">
+
+                <button
+                    className={`nav-toggle ${open ? 'nav-toggle--open' : ''}`}
+                    aria-label={open ? 'Close menu' : 'Open menu'}
+                    aria-expanded={open}
+                    onClick={() => setOpen(!open)}
+                >
+                    <span className="nav-toggle-box">
+                        <span className="nav-toggle-inner" />
+                    </span>
+                </button>
+
+                <div className={`nav-links ${open ? 'nav-links--open' : ''}`} onClick={() => setOpen(false)}>
                     <a href="#features" className="nav-link">Features</a>
                     <a href="#about" className="nav-link">About</a>
                     <a href="#faq" className="nav-link">FAQ</a>
