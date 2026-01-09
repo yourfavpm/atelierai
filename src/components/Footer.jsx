@@ -10,7 +10,7 @@ const Footer = () => {
                         <h2 className="footer-logo">AtelierAI</h2>
                         <p className="footer-tagline">Design with clarity. Prepare with confidence.</p>
                         <div className="footer-ctas">
-                            <a href="#" className="footer-link-main">Start for free →</a>
+                            <a href="https://atelier-weave-ai.lovable.app" target="_blank" rel="noopener noreferrer" className="footer-link-main">Start for free →</a>
                             <a href="#" className="footer-link-main">Explore the platform →</a>
                         </div>
                     </div>

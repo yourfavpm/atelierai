@@ -12,7 +12,7 @@ const Hero = () => {
               An AI platform for fashion designers. Visualize sketches and prepare production-ready documentation for the real world.
             </p>
             <div className="hero-actions-minimal">
-              <a href="#" className="hero-link-minimal">Start for free</a>
+              <a href="https://atelier-weave-ai.lovable.app" target="_blank" rel="noopener noreferrer" className="hero-link-minimal">Start for free</a>
               <a href="#" className="hero-link-minimal hero-link-minimal--secondary">Explore the platform</a>
             </div>
           </div>

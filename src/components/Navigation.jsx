@@ -21,7 +21,7 @@ const Navigation = () => {
                     <a href="#about" className="nav-link">About</a>
                     <a href="#faq" className="nav-link">FAQ</a>
                     <a href="#pricing" className="nav-link">Pricing</a>
-                    <a href="#" className="nav-btn-text">Start for free</a>
+                    <a href="https://atelier-weave-ai.lovable.app" target="_blank" rel="noopener noreferrer" className="nav-btn-text">Start for free</a>
                 </div>
             </div>
         </nav>
