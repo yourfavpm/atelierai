@@ -95,4 +95,9 @@ img {
         --spacing-xl: 4rem;
         --spacing-lg: 2rem;
     }
+
+    /* Ensure fixed nav doesn't overlap content on small screens */
+    body {
+        padding-top: 5rem;
+    }
 }

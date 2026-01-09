@@ -120,6 +120,11 @@
         justify-content: center;
     }
 
+    /* slightly tighter nav padding on small screens */
+    .nav {
+        padding: 0.6rem 0;
+    }
+
     /* when open, show mobile menu as full-width dropdown */
     .nav-links--open {
         display: flex;

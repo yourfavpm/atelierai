@@ -98,4 +98,9 @@
     .hero-subheadline {
         font-size: 1rem;
     }
+
+    /* add extra top space so headline doesn't sit too close to fixed nav */
+    .hero {
+        padding-top: calc(var(--spacing-xl) + 1rem);
+    }
 }
