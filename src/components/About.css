@@ -76,6 +76,43 @@
     }
 }
 
+/* Mobile: stack content and make visuals flow rather than absolute */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .about-visuals {
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: center;
+        padding-top: var(--spacing-md);
+    }
+
+    .about-img-wrapper {
+        position: relative;
+        width: 90%;
+        max-width: 480px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .about-img-wrapper--offset {
+        width: 85%;
+        margin-top: -1.5rem;
+        transform: translateY(-0.5rem);
+    }
+
+    .about-visuals .about-img {
+        border-radius: var(--radius-md);
+    }
+}
+
 @media (max-width: 576px) {
     .about-visuals {
         height: 400px;
