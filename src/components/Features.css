@@ -1,0 +1,132 @@
+.features {
+    background-color: var(--color-bg);
+}
+
+.features-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.features-title {
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.features-interactive {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.features-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.features-nav-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.features-nav-btn:hover {
+    border-color: var(--color-text);
+    color: var(--color-text);
+}
+
+.features-nav-btn.active {
+    background-color: var(--color-text);
+    color: #fff;
+    border-color: var(--color-text);
+}
+
+.features-content-wrapper {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.features-item-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.features-item-desc {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    font-weight: 300;
+}
+
+.features-item-quote {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-text);
+    padding-left: 20px;
+    border-left: 1px solid var(--color-accent);
+}
+
+.features-visual {
+    height: 350px;
+    overflow: hidden;
+}
+
+.features-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .features-visual {
+        height: 300px;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-title {
+        font-size: 1.75rem;
+    }
+
+    .features-item-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .features-item-desc {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-nav-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

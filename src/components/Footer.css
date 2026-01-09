@@ -1,0 +1,135 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-logo {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: var(--spacing-md);
+    max-width: 300px;
+}
+
+.footer-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link-main {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.footer-link-main:hover {
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+}
+
+.footer-links-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 400;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+
+.footer-links-list a {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+    font-weight: 300;
+}
+
+.footer-links-list a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: var(--spacing-lg);
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-socials {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.footer-socials a {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .footer-bottom-flex {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+}

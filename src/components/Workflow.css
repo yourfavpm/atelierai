@@ -1,0 +1,89 @@
+.workflow {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.workflow-intro-box {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl) auto;
+    text-align: center;
+}
+
+.workflow-quote {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+.workflow-collage {
+    position: relative;
+    height: 1200px;
+    margin-top: var(--spacing-xl);
+}
+
+.workflow-collage-item {
+    position: absolute;
+    transition: var(--transition);
+}
+
+.workflow-img {
+    width: 100%;
+    filter: grayscale(0.2);
+    transition: var(--transition);
+    display: block;
+}
+
+.workflow-collage-item:hover .workflow-img {
+    filter: grayscale(0);
+}
+
+.workflow-caption {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    max-width: 250px;
+}
+
+.workflow-collage-item--1 {
+    top: 0;
+    left: 0;
+    width: 60%;
+    z-index: 1;
+}
+
+.workflow-collage-item--2 {
+    top: 300px;
+    right: 0;
+    width: 45%;
+    z-index: 2;
+}
+
+.workflow-collage-item--3 {
+    top: 700px;
+    left: 10%;
+    width: 55%;
+    z-index: 3;
+}
+
+@media (max-width: 992px) {
+    .workflow-collage {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .workflow-collage-item {
+        position: static;
+        width: 100% !important;
+    }
+
+    .workflow-quote {
+        font-size: 1.6rem;
+    }
+}

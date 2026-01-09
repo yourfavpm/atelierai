@@ -1,0 +1,101 @@
+.hero {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    background-color: var(--color-bg);
+}
+
+.hero-minimal-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-lg);
+}
+
+.hero-text-minimal {
+    max-width: 800px;
+}
+
+.hero-headline {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.04em;
+}
+
+.hero-subheadline {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.hero-actions-minimal {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.hero-link-minimal {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 4px;
+    transition: var(--transition);
+}
+
+.hero-link-minimal:hover {
+    letter-spacing: 0.15em;
+}
+
+.hero-link-minimal--secondary {
+    color: var(--color-text-muted);
+    border-bottom-color: var(--color-border);
+}
+
+.hero-image-minimal {
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.hero-image-minimal img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-actions-minimal {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+        word-break: break-word;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+}
